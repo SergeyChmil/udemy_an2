@@ -5,6 +5,9 @@
     <p class="lead">Stocks, Bonds, Mutual Funds</p>
     <hr class="my-2">
     <p>A simple Angular 2 web application</p>
+    <div class="pa-2">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createModal">CREATE</button>
+    </div>
 
     <div class="mx-auto mb-2 pa-2" style="width: 800px" *ngIf="updateEnable">
       Stock Code:<input #updateStockCode [value]="selectedStock.stockCode" />
@@ -34,14 +37,40 @@
     </table>
   </div>
     <hr>
-    <h2>Add Stock</h2>
-    Stock Code:<input #newStockCode />
-    Stock Name:<input #newName />
-
-    <button type="button" class="btn btn-primary" (click)="createStock(newStockCode.value, newName.value)">CREATE</button>
 
     <p class="lead">
       <a class="btn btn-primary btn-lg" href="#" role="button">START</a>
     </p>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">Add a new stock</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="stockCode">Stock Code:</label>
+            <input #newStockCode id="stockCode" class="form-control" required/>
+            <label for="stockName">Stock Name:</label>
+            <input #newName id="stockName" class="form-control" required/>
+            <button type="submit" class="btn btn-warning">Validate</button>
+          </div>
+        </form>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="createStock(newStockCode.value, newName.value); newStockCode.value=''; newName.value='';" data-dismiss="modal">Add stock</button>
+      </div>
+    </div>
   </div>
 </div>

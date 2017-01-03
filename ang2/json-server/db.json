@@ -24,6 +24,31 @@
       "name": "fbgfgbfb",
       "stockCode": "fgfgb",
       "id": 6
+    },
+    {
+      "name": "Tesla Motors",
+      "stockCode": "TSLA",
+      "id": 7
+    },
+    {
+      "name": "Alpha Beta Corporation",
+      "stockCode": "ABC",
+      "id": 8
+    },
+    {
+      "name": "sdcsdcsc",
+      "stockCode": "dcscvsd",
+      "id": 9
+    },
+    {
+      "name": "trtrrttr",
+      "stockCode": "Tratata",
+      "id": 10
+    },
+    {
+      "name": "gbfgbfgb",
+      "stockCode": "dvdbdgb",
+      "id": 11
     }
   ]
 }
